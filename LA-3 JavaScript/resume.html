@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="formCSS.css">
+</head>
+<body>
+<h1 class="heading"> PLAYER REGISTRATION FORM </h1>
+<script >
+function myFunc()
+{
+confirm("Make sure you enter the right login credentials");
+}
+function validateform()
+{
+var name=document.myform.name.value;
+var password=document.myform.password.value;
+if (name==null || name=="")
+{
+alert("Name can't be blank");
+return false;
+}
+else if(password.length<6)
+{
+alert("Password must be at least 6 characters long.");
+return false;
+}
+function containsNumber(str)
+{
+a=/\d/.test(str);
+}
+if(a==false)
+{
+alert("password must atleast contain 1 digit")
+}
+}
+</script>
+<form style="color: #000000; text-align: center;" name="myform"
+method="post" onsubmit="return validateform()" >
+<br>
+PLAYER NAME: <input type="name" name="name">
+<br/>
+<br>
+<label for="team-names">TEAM NAME : </label>
+<select name="team-names" id="team-names">
+<option value=""></option>
+<option value="CSK">CSK</option>
+<option value="MI">MI</option>
+<option value="RCB">RCB</option>
+<option value="KKR">KKR</option>
+<option value="GT">GT</option>
+<option value="LSG">LSG</option>
+<option value="PBKS">PBKS</option>
+<option value="SRH">SRH</option>
+<option value="DC">DC</option>
+<option value="RR">RR</option>
+</select>
+<br/>
+<br>
+<label for="player-skillset">PLAYER SKILLSET : </label>
+<select name="player-skillset" id="player-skillset">
+<option value=""></option>
+<option value="BATSMAN">BATSMAN</option>
+<option value="BOWLER">BOWLER</option>
+<option value="ALL ROUNDER">ALL ROUNDER</option>
+<option value="WICKET KEEPER BATSMAN">WICKET KEEPER BATSMAN</option>
+</select>
+<br/>
+<br>
+<label for="batting-stats">BATTING STATS : </label>
+<select name="batting_stats" id="batting_stats">
+<option value=""></option>
+<option value="RIGHT HAND BATSMAN">RIGHT HAND BATSMAN</option>
+<option value="LEFT HAND BATSMAN">LEFT ARM BATSMAN</option>
+</select>
+<br/>
+<br>
+<label for="bowling-stats">BOWLING SATS : </label>
+<select name="bowling-stats" id="bowling-stats">
+<option value=""></option>
+<option value="RAMP">RIGHT ARM MEDIUM PACER</option>
+<option value="LAMP">LEFT ARM MEDIUM PACER</option>
+<option value="RAOS">RIGHT ARM OFF SPIN</option>
+<option value="LAOS">LEFT ARM OFF SPIN</option>
+<option value="RALS">RIGHT ARM LEG SPIN</option>
+<option value="LAC">LEFT ARM CHINAMAN</option>
+</select>
+<br/>
+<br>
+LOGIN ID : <input type="id" name="id">
+<button onclick="myFunc()">👍</button>
+<br/>
+<br>
+PASSWORD : <input type="password" name="password">
+<button>register</button>
+<div class="pwd">
+<h3> Crtiteria for password creation</h3>
+<input type="checkbox" id="rule1" name="rule1" value="length">
+<label for="vehicle1"> the password must be atleast 6 characters
+long</label><br><br>
+<input type="checkbox" id="rule2" name="rule2" value="digit">
+<label for="vehicle2">the password must contain atleast one
+digit</label><br><br>
+<input type="checkbox" id="rule3" name="rule3" value="uppercase">
+<label for="vehicle3">the password must contain atleast one uppercase
+letter</label>
+</div>
+</form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+body{
+    text-align: center;
+    }
+    .pwd{
+    text-align: center;
+    }
+    body {
+    background-image: url("cricbg3.jpg");
+    background-size:100%;
+    }
+    div {
+    margin-left: 300px;
+    text-align: center;
+    background-color: lightgrey;
+    width: 150px;
+    border: 5px solid green;
+    padding: 25px;
+    margin:20px
+    }
